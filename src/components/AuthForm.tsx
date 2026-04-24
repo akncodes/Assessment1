@@ -51,7 +51,7 @@ function isRateLimitError(error: { message?: string; status?: number } | null) {
   return Boolean(error && (error.status === 429 || error.message?.toLowerCase().includes("rate limit")));
 }
 
-const SIGNUP_COOLDOWN_SECONDS = 60;
+const SIGNUP_COOLDOWN_SECONDS = 15;
 const SIGNUP_COOLDOWN_UNTIL_KEY = "auth_signup_cooldown_until";
 
 export function AuthForm() {
